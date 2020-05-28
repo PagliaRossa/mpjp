@@ -1,5 +1,7 @@
 package m2ex;
 
+import java.util.Arrays;
+
 public class S03 {
     /**
      * Check if the parameter is positive, negative, or zero
@@ -9,7 +11,7 @@ public class S03 {
      */
     public static String checkSign(int value) {
         // TODO
-        return "";
+        return (-value>0)?"negative":(value==0)?"zero":"positive";
     }
 
     /**
@@ -20,7 +22,7 @@ public class S03 {
      */
     public static boolean isOdd(int value) {
         // TODO
-        return false;
+        return (value%2!=0)?true:false;
     }
 
     /**
@@ -31,7 +33,10 @@ public class S03 {
      */
     public static String asWord(int value) {
         // TODO
-        return "";
+        return (value<0)?"other":(value==0)?"zero":(value==1)?"one":
+        		(value==2)?"two":(value==3)?"three":(value==4)?"four":
+        			(value==5)?"five":(value==6)?"six":(value==7)?"seven":
+        				(value==8)?"eight":(value==9)?"nine":"other";
     }
 
     /**
@@ -44,7 +49,9 @@ public class S03 {
      */
     public static char vote(double percentile) {
         // TODO
-        return 'F';
+        return (percentile>90)?'A':(percentile<=90 && percentile>80)?'B':
+        		(percentile<=80 && percentile>70)?'C':(percentile<=70 && percentile>60)?'D':
+        			(percentile<=60 && percentile>50)?'E':'F';
     }
 
     /**
@@ -55,7 +62,10 @@ public class S03 {
      */
     public static boolean isLeapYear(int year) {
         // TODO
-        return false;
+    	final int LEAPCONST=4;
+    	final int SECULAR=100;
+        return (year%100!=0 && year%LEAPCONST==0)?true:
+        		(year%(LEAPCONST*SECULAR)==0)?true:false;
     }
 
     /**
@@ -68,9 +78,11 @@ public class S03 {
      */
     public static int[] sort(int a, int b, int c) {
         int[] result = new int[3];
-
         // TODO
-
+        result[0]=a;
+        result[1]=b;
+        result[2]=c;
+        Arrays.sort(result);
         return result;
     }
 }

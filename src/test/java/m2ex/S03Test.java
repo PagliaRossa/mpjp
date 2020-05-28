@@ -48,6 +48,13 @@ class S03Test {
 
         assertThat(actual, is("zero"));
     }
+    
+    @Test
+    void asWordThree() {
+        String actual = S03.asWord(3);
+
+        assertThat(actual, is("three"));
+    }
 
     @Test
     void asWordOther() {
