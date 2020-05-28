@@ -24,7 +24,7 @@ public class S02 {
      */
     public static double distance(int x0, int y0, int x1, int y1) {
         // TODO
-        return Math.sqrt(Math.abs(x0-x1)+Math.abs(y0-y1));
+        return Math.sqrt(Math.pow(Math.abs(x0-x1),2)+Math.pow(Math.abs(y0-y1),2));
     }
 
     /**
