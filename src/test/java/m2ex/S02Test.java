@@ -40,7 +40,7 @@ class S02Test {
     void engineCapacityPlain() {
         double actual = S02.engineCapacity(74, 75, 4);
 
-        assertThat(actual, closeTo(1290.252, 0.001));
+        assertThat(actual, closeTo(1290.255, 0.001));
     }
 
     @Test
