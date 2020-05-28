@@ -70,7 +70,7 @@ public class S02 {
     public static int score(double x, double y) {
         // TODO
     	double scorex=Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
-    	scorex=(scorex<1)? 10:(scorex<5)?5:(scorex<10)?1:0;
+    	scorex=(scorex<1)?10:(scorex<5)?5:(scorex<10)?1:0;
     	return (int)scorex;
     	
     }
