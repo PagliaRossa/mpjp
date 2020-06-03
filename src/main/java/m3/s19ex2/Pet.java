@@ -18,4 +18,5 @@ public abstract class Pet {
     public int calculateDaily(int dailyPrice) {
         return dailyPrice * days;
     }
+    
 }
